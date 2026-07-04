@@ -1,0 +1,8 @@
+data/
+models/*.pth
+mlruns/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
