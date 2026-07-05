@@ -57,7 +57,7 @@ def evaluate_on_test_set(model, entries, test_clips_dir, device, image_size=(256
 
 
 if __name__ == "__main__":
-    # Note: run this on Colab/Kaggle with 'model' already loaded with trained weights
+   
     import sys
     sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
     from src.evaluation.generate_gt_masks import generate_all_masks
@@ -70,5 +70,4 @@ if __name__ == "__main__":
 
     entries = generate_all_masks(test_json_path, gt_mask_dir)
 
-    # model = ... load your trained model here
-    # evaluate_on_test_set(model, entries, test_clips_dir, device)
+   
