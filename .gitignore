@@ -1,5 +1,4 @@
 data/
-models/*.pth
 mlruns/
 .env
 __pycache__/
