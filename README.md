@@ -2,6 +2,8 @@
 
 Semantic segmentation-based lane detection using U-Net with a MobileNetV2 encoder, trained on the TuSimple dataset, with polynomial curve fitting for lane geometry and vehicle offset estimation.
 
+Live = https://autonomous-lane-detection-5krviztudrkbodbwelpj9i.streamlit.app/
+
 ## Demo
 
 ![Demo](outputs/demo.gif)
