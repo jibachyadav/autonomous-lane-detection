@@ -41,7 +41,7 @@ def generate_all_masks(test_json_path, gt_mask_dir):
 
 
 if __name__ == "__main__":
-    # Note: run this on Colab/Kaggle where the TuSimple test set is available
+    
     test_json_path = '/content/data/TUSimple/test_label.json'
     gt_mask_dir = '/content/data/TUSimple/test_set/gt_masks'
     generate_all_masks(test_json_path, gt_mask_dir)
