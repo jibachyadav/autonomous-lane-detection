@@ -1,1 +1,9 @@
-packaging==26.0
+streamlit
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+segmentation-models-pytorch
+opencv-python-headless
+numpy
+Pillow
+scipy
+mlflow
