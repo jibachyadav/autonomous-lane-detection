@@ -33,7 +33,7 @@ def process_video(video_path, output_path, model, device, image_size=(256, 512))
         if not ret:
             break
 
-        # BGR (OpenCV) -> RGB (PIL/model expects this)
+      
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(frame_rgb).resize(image_size)
 
@@ -42,15 +42,15 @@ def process_video(video_path, output_path, model, device, image_size=(256, 512))
 
         mask = predict_mask(model, img_tensor)
 
-        # Draw curves on the resized image
+        
         curved_image, fitted_curves = draw_lane_curves(pil_image, mask)
         offset = compute_lane_offset(fitted_curves, mask.shape[1], mask.shape[0])
 
-        # Resize annotated frame back to original video resolution
+        
         curved_image_resized = cv2.resize(np.array(curved_image), (orig_width, orig_height))
         curved_bgr = cv2.cvtColor(curved_image_resized, cv2.COLOR_RGB2BGR)
 
-        # Add offset text overlay
+       
         if offset is not None:
             text = f"Offset: {offset:.1f}px"
             cv2.putText(curved_bgr, text, (30, 50), cv2.FONT_HERSHEY_SIMPLEX,
